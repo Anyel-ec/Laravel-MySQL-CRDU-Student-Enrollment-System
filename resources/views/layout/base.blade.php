@@ -8,6 +8,10 @@
     <title>@yield('title')</title>
     <!-- CDN BS5-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css">
+    <!-- Agrega la biblioteca jQuery -->
+    <!--CDN de Font Awensome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
 </head>
 <style>
     /* Color of the links BEFORE scroll */
@@ -58,29 +62,23 @@ body {
           <div class="collapse navbar-collapse" id="navbarExample01">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item active">
-                <a class="nav-link" aria-current="page" href="#news">News</a>
+                <strong>
+                  <a class="nav-link" aria-current="page" href="#news">Materia</a>
+                </strong>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#pets">Pets</a>
+                <a class="nav-link" aria-current="page" href="#pets">Estudiante</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#adoptions">Adoptions</a>
+                <a class="nav-link" aria-current="page" href="#adoptions">Matriculas</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#foundation">Foundation</a>
+                <a class="nav-link" aria-current="page" href="#foundation">Docente</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#help">How can I help?</a>
+                <a class="nav-link" aria-current="page" href="#help">Horario</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#education">Education</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#about">About us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#contact">Contact</a>
-              </li>
+              
             </ul>
       
             <ul class="navbar-nav flex-row">
@@ -103,10 +101,11 @@ body {
           </div>
         </div>
       </nav>
-    <div class="container">
+
+    <div class="container mt-5">
         @yield('content')
     </div>
-
+    
     <!-- Remove the container if you want to extend the Footer to full width. -->
 
     <footer class="text-white text-center text-lg-start mt-5" style="background-color: #23242a;">
@@ -203,7 +202,30 @@ body {
       <!-- Copyright -->
     </footer>
     
-
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    
+    <!-- Agrega la biblioteca DataTables y su extensión Bootstrap 5 -->
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
   <!-- End of .container -->
+
+  <script>
+    $(document).ready(function () {
+        $('#example').DataTable({
+            "language": {
+                "url": "//cdn.datatables.net/plug-ins/1.13.7/i18n/es-ES.json"
+            },
+
+        });
+    });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+<!-- Idioma en Español del data -->
+
 </body>
 </html>

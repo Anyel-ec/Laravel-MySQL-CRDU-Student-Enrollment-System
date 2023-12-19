@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('materia', function (Blueprint $table) {
+        Schema::create('materias', function (Blueprint $table) {
             $table->integer('id_materia')->primary();
             $table->string('nombre', 255);
             $table->text('descripcion');
