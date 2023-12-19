@@ -34,7 +34,6 @@ class MateriaController extends Controller
         $materia->descripcion = $request->descripcion;
         $materia->creditos = $request->creditos;
         $materia->save();
-
         return redirect()->route('materia.index');
     }
 
@@ -51,8 +50,8 @@ class MateriaController extends Controller
      */
     public function edit($id)
     {
-        $materia = Materia::findOrFail($id);
-        return view('materia/editar', compact('materia'));
+        $materia = Materia::find($id);
+        return view('materia/actualizar', compact('materia'));
     }
 
     /**
@@ -60,7 +59,7 @@ class MateriaController extends Controller
      */
     public function update(Request $request, Materia $materia, $id)
     {
-        $materia = Materia::findOrFail($id);
+        $materia = Materia::find($id);
         $materia->nombre = $request->nombre;
         $materia->descripcion = $request->descripcion;
         $materia->creditos = $request->creditos;

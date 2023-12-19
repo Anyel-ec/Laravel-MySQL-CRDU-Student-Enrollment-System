@@ -1,16 +1,16 @@
 @extends('layout.base')
-@section('titulo', 'Materia')
+@section('titulo', 'Estudiante')
 
 
 @section('content')
 <div class="row mt-5">
     <div class="col-sm-12 mt-5">
         <h1 class="mt-5">
-            Materia
+            Estudiante
         </h1>
         <hr>
 
-        <a href="{{route('materia.create')}}">
+        <a href="{{route('estudiante.create')}}">
             <button class="btn btn-primary mb-5">Agregar</button>
         </a>
     </div>
@@ -21,8 +21,9 @@
         <thead>
             <tr>
                 <th>Nombre</th>
-                <th>Descripción</th>
-                <th>Créditos</th>
+                <th>Apellido</th>
+                <th>Fecha de Nacimiento</th>
+                <th>Direccion</th>
                 <th>Editar</th>
                 <th>Eliminar</th>
             </tr>
@@ -31,10 +32,12 @@
             @foreach ($datos as $item)
             <tr>
                 <td>{{$item->nombre}}</td>
-                <td>{{$item->descripcion}}</td>
-                <td>{{$item->creditos}}</td>
+                <td>{{$item->apellido}}</td>
+                <td>{{$item->fecha_nacimiento}}</td>
+                <td>{{$item->direccion}}</td>
+
                 <td>
-                    <form action="{{route('materia.edit', $item->id)}}" method="POST">
+                    <form action="{{route('estudiante.edit', $item->id)}}" method="POST">
                         @csrf
                         <button class="btn btn-warning btn-sm">
                             <span class="fas fa-user-edit"></span>
@@ -42,7 +45,7 @@
                     </form>
                 </td>
                 <td>
-                    <form action="{{ route('materia.destroy', $item->id) }}" method="POST">
+                    <form action="{{ route('estudiante.destroy', $item->id) }}" method="POST">
                         @csrf
                         @method('DELETE')
                         <button class="btn btn-danger btn-sm"
