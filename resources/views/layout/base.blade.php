@@ -92,17 +92,17 @@ body {
       
             <ul class="navbar-nav flex-row">
               <li class="nav-item">
-                <a class="nav-link px-2" href="#!">
+                <a class="nav-link px-2" href="https://www.facebook.com/ESPE.U/?locale=es_LA" target="_blank">
                   <i class="fab fa-facebook-square"></i>
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link px-2" href="#!">
+                <a class="nav-link px-2" href="https://www.youtube.com/channel/UC90HH_DeXCoNQ2bH3Lm9MdQ" target="_blank">
                   <i class="fab fa-instagram"></i>
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link ps-2" href="#!">
+                <a class="nav-link ps-2" href="https://www.instagram.com/p/CuvT_phg2NI/" target="_blank">
                   <i class="fab fa-youtube"></i>
                 </a>
               </li>
@@ -135,17 +135,7 @@ body {
               infinitas!
             </p>
   
-            <div class="mt-4">
-              <!-- Facebook -->
-              <a type="button" class="btn btn-floating btn-warning btn-lg"><i class="fab fa-facebook-f"></i></a>
-              <!-- Dribbble -->
-              <a type="button" class="btn btn-floating btn-warning btn-lg"><i class="fab fa-dribbble"></i></a>
-              <!-- Twitter -->
-              <a type="button" class="btn btn-floating btn-warning btn-lg"><i class="fab fa-twitter"></i></a>
-              <!-- Google + -->
-              <a type="button" class="btn btn-floating btn-warning btn-lg"><i class="fab fa-google-plus-g"></i></a>
-              <!-- Linkedin -->
-            </div>
+          
           </div>
           <!--Grid column-->
   
