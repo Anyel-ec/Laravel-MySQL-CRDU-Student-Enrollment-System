@@ -119,16 +119,15 @@ body {
         <div class="row mt-4">
           <!--Grid column-->
           <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
-            <h5 class="text-uppercase mb-4">About company</h5>
+            <h5 class="text-uppercase mb-4">Sobre Nosotros</h5>
   
             <p>
-              At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-              voluptatum deleniti atque corrupti.
+              ¡Bienvenidos a nuestra comunidad educativa en la ESPE! 
+              facilitamos un proceso de matrícula transparente y sencillo. 
             </p>
-  
             <p>
-              Blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas
-              molestias.
+              ¡Únete a nosotros y descubre un entorno donde la excelencia se fusiona con las oportunidades 
+              infinitas!
             </p>
   
             <div class="mt-4">
@@ -150,22 +149,21 @@ body {
             <h5 class="text-uppercase mb-4 pb-1">Nuestro sistema es super increible y muy eficaz</h5>
   
             <div class="form-outline form-white mb-4">
-              <input type="text" id="formControlLg" class="form-control form-control-lg">
-              <label class="form-label" for="formControlLg" style="margin-left: 0px;">Search</label>
+              
             <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 48.8px;"></div><div class="form-notch-trailing"></div></div></div>
   
             <ul class="fa-ul" style="margin-left: 1.65em;">
               <li class="mb-3">
-                <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">New York, NY 10012, US</span>
+                <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">Vía Santo Domingo - Via Quevedo Km. 24 Hda. Zoila Luz Avenida Quevedo 3-703-914, Santo Domingo </span>
               </li>
               <li class="mb-3">
-                <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">info@example.com</span>
+                <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">santodomingo@.espe.edu.ec</span>
               </li>
               <li class="mb-3">
-                <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">+ 01 234 567 88</span>
+                <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2"> (02) 272-2246</span>
               </li>
               <li class="mb-3">
-                <span class="fa-li"><i class="fas fa-print"></i></span><span class="ms-2">+ 01 234 567 89</span>
+                <span class="fa-li"><i class="fas fa-print"></i></span><span class="ms-2">(593) 2-2722-246</span>
               </li>
             </ul>
           </div>
@@ -173,21 +171,21 @@ body {
   
           <!--Grid column-->
           <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase mb-4">Opening hours</h5>
+            <h5 class="text-uppercase mb-4">Horario de atención</h5>
   
             <table class="table text-center text-white">
               <tbody class="font-weight-normal">
                 <tr>
-                  <td>Mon - Thu:</td>
-                  <td>8am - 9pm</td>
+                  <td>Lunes - Miércoles:</td>
+                  <td>7:00am - 3:30pm</td>
                 </tr>
                 <tr>
-                  <td>Fri - Sat:</td>
-                  <td>8am - 1am</td>
+                  <td>Jueves - Viernes:</td>
+                  <td>7:00am - 3:30pm</td>
                 </tr>
                 <tr>
-                  <td>Sunday:</td>
-                  <td>9am - 10pm</td>
+                  <td>Sábado - Domingo:</td>
+                  <td>Cerrado</td>
                 </tr>
               </tbody>
             </table>
