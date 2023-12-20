@@ -51,7 +51,7 @@ body {
 <body>
     <nav class="navbar navbar-expand-lg fixed-top navbar-scroll">
         <div class="container">
-          <img src="https://mdbootstrap.com/img/Photos/new-templates/animal-shelter/logo.png" height="70" alt=""
+          <img src="{{ asset('img/Logo.png') }}" height="70" alt=""
             loading="lazy" />
           <button class="navbar-toggler ps-0" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
             aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
