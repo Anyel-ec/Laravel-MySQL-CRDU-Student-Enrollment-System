@@ -47,6 +47,11 @@
 body {
   background-color: #eee;
 }
+
+/* Estilo para el texto en negrita */
+.font-weight-bold {
+            font-weight: bold;
+        }
 </style>
 <body>
     <nav class="navbar navbar-expand-lg fixed-top navbar-scroll">
@@ -61,26 +66,26 @@ body {
           </button>
           <div class="collapse navbar-collapse" id="navbarExample01">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item active">
-                <strong>
-                  <a class="nav-link" aria-current="page" href="{{ route('materia.index') }}">Materia</a>
-                </strong>
+              <li class="nav-item">
+         
+                <a class="nav-link @if(request()->routeIs('materia.index')) font-weight-bold @endif" aria-current="page" href="{{ route('materia.index') }}">Materia</a>
+            
               </li>
               
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="{{ route('estudiante.index') }}">Estudiante</a>
+                <a class="nav-link @if(request()->routeIs('estudiante.index')) font-weight-bold @endif" aria-current="page" href="{{ route('estudiante.index') }}">Estudiante</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="{{ route('matricula.index') }}">Matriculas</a>
+                <a class="nav-link @if(request()->routeIs('matricula.index')) font-weight-bold @endif" aria-current="page" href="{{ route('matricula.index') }}">Matrículas</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="{{ route('estado.index') }}">Estado</a>
+                <a class="nav-link @if(request()->routeIs('estado.index')) font-weight-bold @endif" aria-current="page" href="{{ route('estado.index') }}">Estado</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="{{ route('docente.index') }}">Docente</a>
+                <a class="nav-link @if(request()->routeIs('docente.index')) font-weight-bold @endif" aria-current="page" href="{{ route('docente.index') }}">Docente</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="{{ route('horario.index') }}">Horario</a>
+                <a class="nav-link @if(request()->routeIs('horario.index')) font-weight-bold @endif" aria-current="page" href="{{ route('horario.index') }}">Horario</a>
               </li>
               
             </ul>
