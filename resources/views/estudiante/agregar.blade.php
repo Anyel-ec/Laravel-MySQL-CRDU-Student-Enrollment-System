@@ -30,4 +30,31 @@
             </form>
         </div>
     </div>
+
+    <script>
+    window.onload = function() {
+        var inputNombre = document.getElementById('nombre');
+        var inputApellido = document.getElementById('apellido');
+
+        var validar = function (e) {
+            var value = e.target.value;
+            if (!/^[A-Z][a-z]*$/.test(value)) {
+                alert('Por favor, introduce solo letras y comienza con una mayúscula');
+                e.target.value = '';
+            }
+        };
+
+        if(inputNombre) {
+            inputNombre.addEventListener('input', validar);
+        } else {
+            console.error('No se encontró el elemento con id "nombre".');
+        }
+
+        if(inputApellido) {
+            inputApellido.addEventListener('input', validar);
+        } else {
+            console.error('No se encontró el elemento con id "apellido".');
+        }
+    }
+</script>
 @endsection
