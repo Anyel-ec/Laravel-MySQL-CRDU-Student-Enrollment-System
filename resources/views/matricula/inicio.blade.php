@@ -6,7 +6,7 @@
 <div class="row mt-5">
     <div class="col-sm-12 mt-5">
         <h1 class="mt-5">
-            Matricula
+            Matrícula
         </h1>
         <hr>
 
