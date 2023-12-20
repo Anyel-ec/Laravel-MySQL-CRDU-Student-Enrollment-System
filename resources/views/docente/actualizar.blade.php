@@ -14,7 +14,7 @@
                 
                 <div class="mb-3">
                     <label for="nombre" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="nombre" name="nombre" value="{{ $docente->nombre }}" required>
+                    <input type="text" maxlength="50" class="form-control" id="nombre" name="nombre" value="{{ $docente->nombre }}" required>
                 </div>
                 
                 <div class="mb-3">
@@ -24,17 +24,17 @@
                 
                 <div class="mb-3">
                     <label for="celular" class="form-label">Celular</label>
-                    <input type="text" class="form-control" id="celular" name="celular" value="{{ $docente->celular }}" required>
+                    <input type="text" maxlength="10" class="form-control" id="celular" name="celular" value="{{ $docente->celular }}" required>
                 </div>
                 
                 <div class="mb-3">
                     <label for="cedula" class="form-label">Cédula</label>
-                    <input type="text" class="form-control" id="cedula" name="cedula" value="{{ $docente->cedula }}" required>
+                    <input type="text" maxlength="" class="form-control" id="cedula" name="cedula" value="{{ $docente->cedula }}" required>
                 </div>
                 
                 <div class="mb-3">
                     <label for="correo" class="form-label">Correo</label>
-                    <input type="email" class="form-control" id="correo" name="correo" value="{{ $docente->correo }}" required>
+                    <input type="email" maxlength="50" class="form-control" id="correo" name="correo" value="{{ $docente->correo }}" required>
                 </div>
                 
                 <button type="submit" class="btn btn-primary">Guardar</button>

@@ -12,16 +12,16 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('horarios', function (Blueprint $table) {
-            $table->integer('id_horario')->primary();
-            $table->string('dia_semana', 20);
+            $table->id();
+            $table->string('dia_semana', 200);
             $table->time('hora_inicio');
             $table->time('hora_fin');
-            $table->integer('id_materia');
-            $table->integer('id_docente');
-
-            $table->foreign('id_materia')->references('id_materia')->on('Materia');
-            $table->foreign('id_docente')->references('id_docente')->on('Docentes');
-        
+            $table->unsignedBigInteger('materia_id');
+            $table->unsignedBigInteger('docente_id');
+            //////////////////////////////////////////
+            $table->foreign('materia_id')->references('id')->on('Materias');
+            $table->foreign('docente_id')->references('id')->on('Docentes');
+            $table->timestamps();
         });
     }
 

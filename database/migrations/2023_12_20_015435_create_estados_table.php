@@ -11,8 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('matriculas', function (Blueprint $table) {
+        Schema::create('estados', function (Blueprint $table) {
             $table->id();
+            $table->string('nombre', 100);
+            $table->unsignedBigInteger('matricula_id');
+            ///////////////////////////
+            $table->foreign('matricula_id')->references('id')->on('Matriculas');
             $table->timestamps();
         });
     }
@@ -22,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('matriculas');
+        Schema::dropIfExists('estados');
     }
 };

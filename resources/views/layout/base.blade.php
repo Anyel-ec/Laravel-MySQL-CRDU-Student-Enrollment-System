@@ -63,20 +63,24 @@ body {
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item active">
                 <strong>
-                  <a class="nav-link" aria-current="page" href="#news">Materia</a>
+                  <a class="nav-link" aria-current="page" href="{{ route('materia.index') }}">Materia</a>
                 </strong>
               </li>
+              
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#pets">Estudiante</a>
+                <a class="nav-link" aria-current="page" href="{{ route('estudiante.index') }}">Estudiante</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#adoptions">Matriculas</a>
+                <a class="nav-link" aria-current="page" href="{{ route('matricula.index') }}">Matriculas</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#foundation">Docente</a>
+                <a class="nav-link" aria-current="page" href="{{ route('estado.index') }}">Estado</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#help">Horario</a>
+                <a class="nav-link" aria-current="page" href="{{ route('docente.index') }}">Docente</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="{{ route('horario.index') }}">Horario</a>
               </li>
               
             </ul>

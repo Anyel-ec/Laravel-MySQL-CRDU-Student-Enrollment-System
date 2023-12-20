@@ -74,7 +74,7 @@ class EstudianteController extends Controller
      */
     public function destroy(Estudiante $estudiante, $id)
     {
-        $estudiante = Estudiante::findOrFail($id);
+        $estudiante = Estudiante::find($id);
         $estudiante->delete();
         return redirect()->route('estudiante.index');
     }

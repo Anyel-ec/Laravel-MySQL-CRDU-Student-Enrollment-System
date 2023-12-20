@@ -5,16 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Matricula extends Model
+
+class Horario extends Model
 {
     use HasFactory;
     public function materia()
     {
         return $this->belongsTo(Materia::class, 'materia_id');
     }
-
-    public function estudiante()
+    public function docente()
     {
-        return $this->belongsTo(Estudiante::class, 'estudiante_id');
+        return $this->belongsTo(Docente::class, 'docente_id');
     }
 }

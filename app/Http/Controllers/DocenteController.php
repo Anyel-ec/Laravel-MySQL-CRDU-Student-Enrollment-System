@@ -76,7 +76,7 @@ class DocenteController extends Controller
      */
     public function destroy(Docente $docente, $id)
     {
-        $docente = Docente::findOrFail($id);
+        $docente = Docente::find($id);
         $docente->delete();
         return redirect()->route('docente.index');
     }
