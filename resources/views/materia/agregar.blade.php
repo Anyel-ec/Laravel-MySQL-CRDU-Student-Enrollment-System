@@ -11,11 +11,11 @@
                 @csrf
                 <div class="mb-3">
                     <label for="nombre" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="nombre" name="nombre" required>
+                    <input type="text" maxlength="50" class="form-control" id="nombre" name="nombre" required>
                 </div>
                 <div class="mb-3">
                     <label for="descripcion" class="form-label">Descripción</label>
-                    <input type="text" class="form-control" id="descripcion" name="descripcion" required>
+                    <input type="text" maxlength="100" class="form-control" id="descripcion" name="descripcion" required>
                 </div>
                 <div class="mb-3">
                     <label for="creditos" class="form-label">Créditos</label>

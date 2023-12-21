@@ -88,6 +88,35 @@ body {
                 <a class="nav-link @if(request()->routeIs('horario.index')) font-weight-bold @endif" aria-current="page" href="{{ route('horario.index') }}">Horario</a>
               </li>
               
+              <li class="nav-item">
+                @if(session()->has('usuario'))
+                <li class="nav-item">
+                  <a class="nav-link @if(request()->routeIs('usuario.index')) font-weight-bold @endif" aria-current="page" href="{{ route('usuario.index') }}">Usuarios</a>
+                </li>
+                    <span class="nav-link text-primary">Bienvenido, {{ session('usuario') }}</span>
+                @else
+                <form action="/" method="get" class="d-inline">
+                  @csrf
+                  <button type="submit" class="nav-link" style="background: none; border: none">
+                    <i class="fas fa-sign-in-alt" style="color: #272626;"></i>
+                </button>
+                
+                              </form>
+              
+              @endif
+            </li>
+            @if(session()->has('usuario'))
+            <li class="nav-item">
+              <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-inline">
+                @csrf
+                <button type="submit" class="nav-link" style="background: none; border: none; color: #007bff; cursor: pointer;">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button>
+            </form>
+            
+            </li>
+        @endif
+        
             </ul>
       
             <ul class="navbar-nav flex-row">
@@ -109,7 +138,7 @@ body {
             </ul>
           </div>
         </div>
-      </nav>
+    </nav>
 
     <div class="container mt-5">
         @yield('content')
@@ -193,8 +222,8 @@ body {
   
       <!-- Copyright -->
       <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-        © 2020 Copyright:
-        <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        © 2023 Copyright:
+        <a class="text-white" href="https://mdbootstrap.com/">Dev Group E</a>
       </div>
       <!-- Copyright -->
     </footer>

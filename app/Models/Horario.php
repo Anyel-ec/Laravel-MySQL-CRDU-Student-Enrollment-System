@@ -11,10 +11,10 @@ class Horario extends Model
     use HasFactory;
     public function materia()
     {
-        return $this->belongsTo(Materia::class, 'materia_id');
+        return $this->belongsTo(Materia::class, 'materia_id'); //Relacion de claves
     }
     public function docente()
     {
-        return $this->belongsTo(Docente::class, 'docente_id');
+        return $this->belongsTo(Docente::class, 'docente_id');//Relacion de claves
     }
 }

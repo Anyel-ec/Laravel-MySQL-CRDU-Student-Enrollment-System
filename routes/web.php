@@ -7,6 +7,7 @@ use App\Http\Controllers\MatriculaController;
 use App\Http\Controllers\DocenteController;
 use App\Http\Controllers\EstadoController;
 use App\Http\Controllers\HorarioController;
+use App\Http\Controllers\UsuarioController;
 
 
 /*
@@ -24,6 +25,7 @@ use App\Http\Controllers\HorarioController;
 Route::get('/', function () {
     return view('welcome');
 });
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -85,3 +87,19 @@ Route::post('/horario/store', [HorarioController::class, 'store'])->name('horari
 Route::post('/horario/edit/{id}', [HorarioController::class, 'edit'])->name('horario.edit');
 Route::post('/horario/update/{id}', [HorarioController::class, 'update'])->name('horario.update');
 Route::delete('/horario/destroy/{id}', [HorarioController::class, 'destroy'])->name('horario.destroy');
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Route::get('/usuario', [UsuarioController::class, 'index'])->name('usuario.index');
+Route::get('/usuario/create', [UsuarioController::class, 'create'])->name('usuario.create');
+// //Route::get('/edit', [PersonasController::class, 'edit'])->name('persona.edit');
+Route::post('/usuario/store', [UsuarioController::class, 'store'])->name('usuario.store');
+Route::post('/usuario/edit/{id}', [UsuarioController::class, 'edit'])->name('usuario.edit');
+Route::post('/usuario/update/{id}', [UsuarioController::class, 'update'])->name('usuario.update');
+Route::delete('/usuario/destroy/{id}', [UsuarioController::class, 'destroy'])->name('usuario.destroy');
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Route::post('/login', [UsuarioController::class, 'login'])->name('login');
+Route::post('/logout', [UsuarioController::class, 'logout'])->name('logout');
