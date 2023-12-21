@@ -1,100 +1,99 @@
-# Laravel MySQL CRUD with Image Upload
+# Proyecto Laravel - Sistema de Matricula Académica
 
-This Laravel project implements a basic CRUD (Create, Read, Update, Delete) system to manage student information, including the ability to upload profile images.
+Este es un proyecto de Sistema de Gestión Académica desarrollado con Laravel, un framework de PHP. El sistema sigue el patrón de diseño Modelo-Vista-Controlador (MVC) y utiliza migraciones, modelos y controladores para organizar y gestionar los datos.
 
+## Instalación
 
-*Select Language:*
-- [Español (Spanish)](README-es.md)
-- [English](README.md)
-
-## Results
-### Home 
-![Alt text](docs/inicio.PNG) 
-### Create 
-![Alt text](docs/create.PNG) 
-### Edit 
-![Alt text](docs/actualizar.PNG) 
-### Delete 
-![Alt text](docs/eliminar.PNG) 
-
-# README 
-
-
-
-#### System Requirements
-
-- PHP 8.2.4
-- Composer 2.6.6
-
-#### Installation
-
-1. Clone the repository to your local machine:
+1. Clona el repositorio en tu máquina local:
 
    bash
-   git clone https://github.com/Anyel-ec/Laravel-MySQL-CRUD-UPLOAD-IMAGE
+   git clone https://github.com/tu_usuario/tu_proyecto.git
    
 
-2. Navigate to the project directory:
-
-   bash
-   cd Laravel-MySQL-CRUD-UPLOAD-IMAGE
-   
-
-3. Install dependencies with Composer:
+2. Instala las dependencias del proyecto:
 
    bash
    composer install
    
 
-#### Database Configuration
+3. Copia el archivo de configuración .env:
 
-1. Configure the .env file with your database details:
-
-   dotenv
-   DB_CONNECTION=mysql
-   DB_HOST=127.0.0.1
-   DB_PORT=3306
-   DB_DATABASE=your_database_name
-   DB_USERNAME=your_database_user
-   DB_PASSWORD=your_database_password
+   bash
+   cp .env.example .env
    
 
-2. Run migrations to create the students' table:
+4. Genera la clave de la aplicación:
+
+   bash
+   php artisan key:generate
+   
+
+5. Configura la base de datos en el archivo .env con tus credenciales.
+
+6. Ejecuta las migraciones para crear las tablas de la base de datos:
 
    bash
    php artisan migrate
    
 
-#### Usage
-
-1. Run the development server:
+7. Inicia el servidor de desarrollo:
 
    bash
    php artisan serve
    
 
-2. Access the application in your browser: [http://localhost:8000](http://localhost:8000)
+   El proyecto estará disponible en [http://localhost:8000](http://localhost:8000).
 
-3. Navigate through different sections of the application:
+## Rutas y Controladores
 
-   - *List of Students:* [http://localhost:8000/](http://localhost:8000/)
-   - *Add New Student:* [http://localhost:8000/create](http://localhost:8000/create)
-   - *Edit Student:* [http://localhost:8000/edit/{id}](http://localhost:8000/edit/{id})
+### Materias
 
-#### Image Storage
+- Listar todas las materias:
 
-Student profile images are stored in the storage/app/uploads folder. To access these images from the browser, follow these steps:
+  php
+  Route::get('/materia', [MateriaController::class, 'index'])->name('materia.index');
+  
 
-1. Create a symbolic link for the storage folder:
+- Crear una nueva materia:
 
-   bash
-   php artisan storage:link
-   
+  php
+  Route::get('/materia/create', [MateriaController::class, 'create'])->name('materia.create');
+  
 
-2. Images will be available at the URL:
+- Almacenar una nueva materia en la base de datos:
 
-   
-   http://localhost:8000/storage/uploads/image_name.jpg
-   
+  php
+  Route::post('/materia/store', [MateriaController::class, 'store'])->name('materia.store');
+  
 
-   Replace image_name.jpg with the actual name of the image you want to view.
+- Editar una materia existente:
+
+  php
+  Route::post('/materia/edit/{id}', [MateriaController::class, 'edit'])->name('materia.edit');
+  
+
+- Actualizar una materia en la base de datos:
+
+  php
+  Route::post('/materia/update/{id}', [MateriaController::class, 'update'])->name('materia.update');
+  
+
+- Eliminar una materia:
+
+  php
+  Route::delete('/materia/destroy/{id}', [MateriaController::class, 'destroy'])->name('materia.destroy');
+  
+
+### Estudiantes, Matrículas, Docentes, Estados y Horarios
+
+Se siguen patrones similares para las demás entidades del sistema, como estudiantes, matrículas, docentes, estados y horarios. Puedes explorar las rutas en el archivo web.php y los controladores respectivos para más detalles.
+
+## Contribuciones
+
+¡Siéntete libre de contribuir al proyecto! Abre un issue para discutir nuevas características o problemas, y realiza pull requests para proponer cambios.
+
+## Licencia
+
+Este proyecto está bajo la licencia [MIT](LICENSE).
+
+¡Gracias por usar nuestro Sistema de Gestión Académica con Laravel!
