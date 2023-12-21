@@ -1,99 +1,129 @@
-# Proyecto Laravel - Sistema de Matricula Académica
+# Laravel Project - Academic Enrollment System
 
-Este es un proyecto de Sistema de Gestión Académica desarrollado con Laravel, un framework de PHP. El sistema sigue el patrón de diseño Modelo-Vista-Controlador (MVC) y utiliza migraciones, modelos y controladores para organizar y gestionar los datos.
+This is a Laravel-based Academic Management System, a PHP framework. The system follows the Model-View-Controller (MVC) design pattern and utilizes migrations, models, and controllers to organize and manage data.
 
-## Instalación
+**Select Language:**
+- [Español (Spanish)](README-es.md)
+- [English](README.md)
 
-1. Clona el repositorio en tu máquina local:
+## Results
+### Database 
+![Alt text](docs/db.PNG) 
+### Login 
+![Alt text](docs/login.PNG) 
+### Teacher 
+![Alt text](docs/docente.PNG) 
+### Student 
+![Alt text](docs/estudiante.PNG) 
+### Schedule 
+![Alt text](docs/horario.PNG) 
+### Subject 
+![Alt text](docs/materia.PNG) 
+### Enrollment 
+![Alt text](docs/matricula.PNG) 
+### User 
+![Alt text](docs/usuario.PNG) 
+### Add User 
+![Alt text](docs/agregar_usuario.PNG) 
+### Update User 
+![Alt text](docs/actualizacion.PNG) 
+### Delete User 
+![Alt text](docs/eliminar.PNG) 
+### Logout 
+![Alt text](docs/logout.PNG) 
 
-   bash
-   git clone https://github.com/tu_usuario/tu_proyecto.git
-   
+## Installation
 
-2. Instala las dependencias del proyecto:
+1. Clone the repository on your local machine:
 
-   bash
+   ```bash
+   git clone https://github.com/Anyel-ec/Laravel-MySQL-Docker-CRUD-Student-Enrollment-System
+   ```
+
+2. Install project dependencies:
+
+   ```bash
    composer install
-   
+   ```
 
-3. Copia el archivo de configuración .env:
+3. Copy the configuration file .env:
 
-   bash
+   ```bash
    cp .env.example .env
-   
+   ```
 
-4. Genera la clave de la aplicación:
+4. Generate the application key:
 
-   bash
+   ```bash
    php artisan key:generate
-   
+   ```
 
-5. Configura la base de datos en el archivo .env con tus credenciales.
+5. Configure the database in the .env file with your credentials.
 
-6. Ejecuta las migraciones para crear las tablas de la base de datos:
+6. Run migrations to create database tables:
 
-   bash
+   ```bash
    php artisan migrate
-   
+   ```
 
-7. Inicia el servidor de desarrollo:
+7. Start the development server:
 
-   bash
+   ```bash
    php artisan serve
-   
+   ```
 
-   El proyecto estará disponible en [http://localhost:8000](http://localhost:8000).
+   The project will be available at [http://localhost:8000](http://localhost:8000).
 
-## Rutas y Controladores
+## Routes and Controllers
 
-### Materias
+### Subjects
 
-- Listar todas las materias:
+- List all subjects:
 
-  php
-  Route::get('/materia', [MateriaController::class, 'index'])->name('materia.index');
-  
+  ```php
+  Route::get('/subject', [SubjectController::class, 'index'])->name('subject.index');
+  ```
 
-- Crear una nueva materia:
+- Create a new subject:
 
-  php
-  Route::get('/materia/create', [MateriaController::class, 'create'])->name('materia.create');
-  
+  ```php
+  Route::get('/subject/create', [SubjectController::class, 'create'])->name('subject.create');
+  ```
 
-- Almacenar una nueva materia en la base de datos:
+- Store a new subject in the database:
 
-  php
-  Route::post('/materia/store', [MateriaController::class, 'store'])->name('materia.store');
-  
+  ```php
+  Route::post('/subject/store', [SubjectController::class, 'store'])->name('subject.store');
+  ```
 
-- Editar una materia existente:
+- Edit an existing subject:
 
-  php
-  Route::post('/materia/edit/{id}', [MateriaController::class, 'edit'])->name('materia.edit');
-  
+  ```php
+  Route::post('/subject/edit/{id}', [SubjectController::class, 'edit'])->name('subject.edit');
+  ```
 
-- Actualizar una materia en la base de datos:
+- Update a subject in the database:
 
-  php
-  Route::post('/materia/update/{id}', [MateriaController::class, 'update'])->name('materia.update');
-  
+  ```php
+  Route::post('/subject/update/{id}', [SubjectController::class, 'update'])->name('subject.update');
+  ```
 
-- Eliminar una materia:
+- Delete a subject:
 
-  php
-  Route::delete('/materia/destroy/{id}', [MateriaController::class, 'destroy'])->name('materia.destroy');
-  
+  ```php
+  Route::delete('/subject/destroy/{id}', [SubjectController::class, 'destroy'])->name('subject.destroy');
+  ```
 
-### Estudiantes, Matrículas, Docentes, Estados y Horarios
+### Students, Enrollments, Teachers, States, and Schedules
 
-Se siguen patrones similares para las demás entidades del sistema, como estudiantes, matrículas, docentes, estados y horarios. Puedes explorar las rutas en el archivo web.php y los controladores respectivos para más detalles.
+Similar patterns are followed for other entities in the system, such as students, enrollments, teachers, states, and schedules. You can explore the routes in the web.php file and the respective controllers for more details.
 
-## Contribuciones
+## Contributions
 
-¡Siéntete libre de contribuir al proyecto! Abre un issue para discutir nuevas características o problemas, y realiza pull requests para proponer cambios.
+Feel free to contribute to the project! Open an issue to discuss new features or problems, and make pull requests to propose changes.
 
-## Licencia
+## License
 
-Este proyecto está bajo la licencia [MIT](LICENSE).
+This project is under the [MIT License](LICENSE).
 
-¡Gracias por usar nuestro Sistema de Gestión Académica con Laravel!
+Thank you for using our Academic Management System with Laravel!
